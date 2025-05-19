@@ -1,0 +1,9 @@
+pandas
+plotly
+streamlit
+pdfplumber
+requests
+pathlib
+numpy
+bs4
+io
