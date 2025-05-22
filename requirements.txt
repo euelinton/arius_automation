@@ -5,7 +5,4 @@ pdfplumber==0.11.6
 plotly==6.0.1
 Requests==2.32.3
 streamlit==1.44.1
-<<<<<<< HEAD
-=======
 xlrd>=2.0.1
->>>>>>> 079e4a36b2d250212ff2f929ff24d315a48868c1
