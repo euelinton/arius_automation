@@ -13,27 +13,17 @@ class Parser:
         table_str = str(table)
 
         df = pd.read_html(StringIO(table_str))[0]
-<<<<<<< HEAD
-=======
-        df.dropna(inplace=True)
->>>>>>> 079e4a36b2d250212ff2f929ff24d315a48868c1
         df.columns = df.iloc[0]
         df.drop(0, inplace=True)
 
         df = df[["Nro.cupom", "PDV", "Data", "Operador", "merc", "Valor", "Tipo cancelamento"]]
         df.rename(columns={"Nro.cupom": "Cupom", "merc": "Item", "PDV": "Pdv"}, inplace=True)
-<<<<<<< HEAD
         df.dropna(inplace=True)
 
         df["Valor"] = df["Valor"].astype(str)
         df["Valor"] = df["Valor"].str.replace(".", ",")
         df["Data"] = pd.to_datetime(df["Data"], format="%d/%m/%Y")
         
-=======
-        df["Valor"] = df["Valor"].astype(str)
-        df["Valor"] = df["Valor"].str.replace(".", ",")
-
->>>>>>> 079e4a36b2d250212ff2f929ff24d315a48868c1
         return df
     
     def parse_report_reimps(self, reimps):
@@ -56,11 +46,7 @@ class Parser:
             for ii, ri in itens.iterrows():
                 if rc["Item"] == "năo encontrado" and rc["Cupom"] == ri["Cupom"]:
                     canc.loc[ic, "Tipo de Estorno"] = "ESTORNO DE ITEM"
-<<<<<<< HEAD
                 if rc["Cupom"] == ri["Cupom"] and rc["Item"] == ri["Item"] and rc["Valor"] == ri["Valor"]:
-=======
-                if rc["Cupom"] == ri["Cupom"] and rc["Item"] == ri["Item"] and rc["Item"] == ri["Item"]:
->>>>>>> 079e4a36b2d250212ff2f929ff24d315a48868c1
                     canc.loc[ic, "Tipo de Estorno"] = "ESTORNO DE ITEM"  
                     #print("index canc:", ic,"index item: ",ii, ri[["Hora", "Item"]])
                     #print("-------------------------------------------------------")  
