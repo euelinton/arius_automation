@@ -18,8 +18,13 @@ data_login = {
 }
 
 params = {
+<<<<<<< HEAD
     "dataproc_i": "14/05/2025",
     "dataproc_f": "21/05/2025",
+=======
+    "dataproc_i": "01/05/2025",
+    "dataproc_f": "13/05/2025",
+>>>>>>> 079e4a36b2d250212ff2f929ff24d315a48868c1
 }
 
 def main():
