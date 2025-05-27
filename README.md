@@ -1,5 +1,5 @@
 # arius_automation
-Projeto de automação do sistema Arius 
+Projeto de automação do sistema de ERP para varejo - Arius 
 
 ## Funções:
 - Realiza a busca do relatório de cancelamentos a partir de uma data específica
